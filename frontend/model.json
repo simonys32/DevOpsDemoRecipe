@@ -50,23 +50,66 @@
                 ]
             },
             {
-                "id": "ToDoForm",
-                "title": { "default": "ToDo"
+                "id": "RecipeForm",
+                "title": { "default": "Rezept"
                 },
-                "url": "/todo",
+                "url": "/recipe",
                 "formFieldList": [
                     {
                         "id": "title",
                         "type": "text",
-                        "name": { "default": "Titel"
+                        "name": { "default": "Rezeptname"
                         },
                         "required": true,
                         "width": 2
                     },
                     {
+                        "id": "category",
+                        "type": "text",
+                        "name": { "default": "Kategorie"
+                        },
+                        "newRow": true,
+                        "width": 1
+                    },
+                    {
+                        "id": "cookingTime",
+                        "type": "text",
+                        "name": { "default": "Zubereitungszeit"
+                        },
+                        "width": 1
+                    },
+                    {
+                        "id": "servings",
+                        "type": "text",
+                        "name": { "default": "Portionen"
+                        },
+                        "newRow": true,
+                        "width": 1
+                    },
+                    {
                         "id": "description",
                         "type": "text",
-                        "name": { "default": "Text"
+                        "name": { "default": "Beschreibung"
+                        },
+                        "newRow": true,
+                        "maxLength": 4000,
+                        "height": 2,
+                        "width": 2
+                    },
+                    {
+                        "id": "ingredients",
+                        "type": "text",
+                        "name": { "default": "Zutaten"
+                        },
+                        "newRow": true,
+                        "maxLength": 4000,
+                        "height": 4,
+                        "width": 2
+                    },
+                    {
+                        "id": "instructions",
+                        "type": "text",
+                        "name": { "default": "Zubereitung"
                         },
                         "newRow": true,
                         "maxLength": 4000,
@@ -95,47 +138,47 @@
                 "elementList": [
                     {
                         "type": "pageLabel",
-                        "value": "<h4>Willkommen bei DevOps</h4>",
+                        "value": "<h4>Willkommen bei der Rezeptsammlung</h4>",
                         "newRow": true
                     },
                     {
                         "type": "button",
-                        "name": { "default": "ToDo-List"
+                        "name": { "default": "Rezepte"
                         },
-                        "icon": "fa-file-alt",
+                        "icon": "fa-utensils",
                         "color": "wet-asphalt",
-                        "page": "toDoPage",
+                        "page": "recipePage",
                         "width": 2,
                         "newRow": true
                     }
                 ]
             },
             {
-                "id": "toDoPage",
+                "id": "recipePage",
                 "elementList": [
                     {
                         "type": "backbutton"
                     },
                     {
                         "type": "newButton",
-                        "name": { "default": "Neues ToDo"
+                        "name": { "default": "Neues Rezept"
                         },
-                        "icon": "fa-user",
+                        "icon": "fa-plus",
                         "color": "green",
                         "width": 2,
                         "form": {
-                            "form": "ToDoForm"
+                            "form": "RecipeForm"
                         }
                     },
                     {
                         "type": "list",
-                        "name": "ToDo",
-                        "icon": "fa-user",
+                        "name": "Rezepte",
+                        "icon": "fa-utensils",
                         "color": "wet-asphalt",
                         "search": true,
-                        "url": "/todo",
+                        "url": "/recipe",
                         "form": {
-                            "form": "ToDoForm"
+                            "form": "RecipeForm"
                         }
                     }
                 ]

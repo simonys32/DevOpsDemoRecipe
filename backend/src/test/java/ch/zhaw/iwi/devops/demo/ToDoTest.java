@@ -13,5 +13,5 @@ public class ToDoTest {
         assertEquals("description", toDo1.getDescription());
         assertEquals(1, toDo1.getId());
     }
-    
+
 }

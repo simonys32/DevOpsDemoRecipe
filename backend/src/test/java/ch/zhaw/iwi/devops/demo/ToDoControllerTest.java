@@ -8,7 +8,7 @@ import static org.mockito.Mockito.when;
 import org.junit.jupiter.api.Test;
 
 public class ToDoControllerTest {
-    
+
     @Test
     public void testCreate() {
         var controller = new ToDoController();

@@ -8,7 +8,7 @@ public class ToDo {
 
     public ToDo() {
     }
-    
+
     public ToDo(Integer id, String title, String description) {
         this.id = id;
         this.title = title;
@@ -17,7 +17,7 @@ public class ToDo {
 
     public Integer getId() {
         return id;
-    }    
+    }
 
     public void setId(Integer id) {
         this.id = id;
@@ -30,5 +30,5 @@ public class ToDo {
     public String getDescription() {
         return description;
     }
-    
+
 }
